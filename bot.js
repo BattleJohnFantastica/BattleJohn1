@@ -273,14 +273,11 @@ function postMessage5() {
 function postMessage6() {
   
   var botResponse, attach, options, body, botReq;
-    botResponse = ">Who are you people";
-    redditComment = ['January', 'February', 'March'];
+    botResponse = myArray.randomElement();
     Array.prototype.randomElement = function () {
     return this[Math.floor(Math.random() * this.length)]
 }
-  var myRandomElement = myArray.randomElement()
-   
-   
+    myArray = ['January', 'February', 'March'];
 
   options = {
     hostname: 'api.groupme.com',
