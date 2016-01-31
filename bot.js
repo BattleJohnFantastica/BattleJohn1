@@ -10,6 +10,7 @@ function respond() {
       botRegex3 = /^\/dormer$/;
       botRegex4 = /^\/youknownothing$/;
       botRegex5 = /^\/John$/;
+      botRegex6 = /^\/redditcomment$/;
 
   if(request.text && botRegex1.test(request.text)) {
     this.res.writeHead(200);
@@ -59,11 +60,21 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+  
+  if(request.text && botRegex6.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage6();
+    this.res.end();
+      } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
 }
 
 function postMessage2() {
   var botResponse, attach, options, body, botReq;
-    botResponse = "/lies /dormer /youknownothing /John /help";
+    botResponse = "/lies /dormer /youknownothing /John /redditcomment /help";
    
   options = {
     hostname: 'api.groupme.com',
@@ -226,6 +237,49 @@ function postMessage4() {
 function postMessage5() {
   var botResponse, attach, options, body, botReq;
     botResponse = ">Who are you people";
+   
+
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+    "bot_id" : botID,
+    "text" : botResponse,
+    
+       };
+
+  console.log('sending ' + botResponse + ' to ' + botID);
+
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
+}
+
+function postMessage6() {
+  
+  var botResponse, attach, options, body, botReq;
+    botResponse = ">Who are you people";
+    redditComment = ['January', 'February', 'March'];
+    Array.prototype.randomElement = function () {
+    return this[Math.floor(Math.random() * this.length)]
+}
+  var myRandomElement = myArray.randomElement()
+   
    
 
   options = {
