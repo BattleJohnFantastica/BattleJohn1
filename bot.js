@@ -277,7 +277,7 @@ function postMessage6() {
   var botResponse, myArray, randomValue, options, body, botReq;
     botResponse = randomValue;
     myArray = ["January", "February", "March"];
-   randomValue = myArray[Math.floor(Math.random() * myArray.length)];
+   randomValue = myArray[Math.floor(Math.random() * myArray.length)]
  
 
   options = {
@@ -288,11 +288,11 @@ function postMessage6() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse,
+    "text" : randomValue,
     
        };
 
-  console.log('sending ' + botResponse + ' to ' + botID);
+  console.log('sending ' + randomValue + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
