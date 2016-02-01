@@ -274,12 +274,11 @@ function postMessage5() {
 
 function postMessage6() {
   
-  var botResponse, myArray, randomValue, options, body, botReq;
-    botResponse = randomValue;
+  var botResponse, myArray, options, body, botReq;
     myArray = ["January", "February", "March"];
-   randomValue = myArray[Math.floor(Math.random() * myArray.length)]
- 
-
+    botResponse = myArray[Math.floor(Math.random()*myArray.length)];
+    
+    
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -288,11 +287,11 @@ function postMessage6() {
 
   body = {
     "bot_id" : botID,
-    "text" : randomValue,
+    "text" : botResponse,
     
        };
 
-  console.log('sending ' + randomValue + ' to ' + botID);
+  console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
