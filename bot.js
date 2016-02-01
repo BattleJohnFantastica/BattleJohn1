@@ -274,8 +274,19 @@ function postMessage5() {
 
 function postMessage6() {
   
-  var botResponse, options, body, botReq;
-    botResponse = ["January", "February", "March", "April"];
+  var botResponse, keywords, options, body, botReq;
+    botResponse = keyword;
+    keywords = 
+[
+ "ppc", 
+ "games", 
+ "advertise", 
+ "meta", 
+ "home", 
+ "gaming", 
+ "welcome"
+];
+var keyword = keywords[Math.floor(Math.random()*keywords.length)];
     
   options = {
     hostname: 'api.groupme.com',
