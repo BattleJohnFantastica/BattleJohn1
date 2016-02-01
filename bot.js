@@ -10,7 +10,7 @@ function respond() {
       botRegex3 = /^\/dormer$/;
       botRegex4 = /^\/youknownothing$/;
       botRegex5 = /^\/John$/;
-      botRegex6 = /^\/redditcomment$/;
+      botRegex6 = /^\/reddit$/;
 
   if(request.text && botRegex1.test(request.text)) {
     this.res.writeHead(200);
@@ -275,9 +275,8 @@ function postMessage5() {
 function postMessage6() {
   
   var botResponse, keywords, options, body, botReq;
-    botResponse = keyword;
-    keywords = 
-[
+    
+    keywords = [
  "ppc", 
  "games", 
  "advertise", 
@@ -296,11 +295,11 @@ var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse,
+    "text" : keyword,
     
        };
 
-  console.log('sending ' + botResponse + ' to ' + botID);
+  console.log('sending ' + keyword + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
