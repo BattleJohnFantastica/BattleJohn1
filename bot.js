@@ -74,7 +74,7 @@ function respond() {
 
 function postMessage2() {
   var botResponse, attach, options, body, botReq;
-    botResponse = "/lies /dormer /youknownothing /John /redditcomment /help";
+    botResponse = "/lies /dormer /youknownothing /John /reddit /help";
    
   options = {
     hostname: 'api.groupme.com',
@@ -277,13 +277,13 @@ function postMessage6() {
   var botResponse, keywords, options, body, botReq;
     
     keywords = [
- "ppc", 
- "games", 
- "advertise", 
- "meta", 
- "home", 
- "gaming", 
- "welcome"
+ "Fuckin Butter Bar", 
+ "What game is that?", 
+ "Don't have sex in that helmet!", 
+ "Does the suit help too? Why haven't you mentioned it?", 
+ "That'll stop him getting laid", 
+ "Make him a sandwich", 
+ "It's so he can't hear you nag! HAHAHAHHAHAHAHHAHAH"
 ];
 var keyword = keywords[Math.floor(Math.random()*keywords.length)];
     
