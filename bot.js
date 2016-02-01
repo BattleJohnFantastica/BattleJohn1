@@ -274,10 +274,8 @@ function postMessage5() {
 
 function postMessage6() {
   
-  var botResponse, myArray, options, body, botReq;
-    myArray = ["January", "February", "March"];
-    botResponse = myArray[Math.floor(Math.random()*myArray.length)];
-    
+  var botResponse, options, body, botReq;
+    botResponse = ["January", "February", "March", "April"];
     
   options = {
     hostname: 'api.groupme.com',
