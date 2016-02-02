@@ -342,7 +342,7 @@ var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 
     function postMessage7() {
   var botResponse, attach, options, body, botReq;
-    botResponse = "lies";
+    botResponse = "MIND BLOWN";
     attach = [
     {
       "type"  : "image",
