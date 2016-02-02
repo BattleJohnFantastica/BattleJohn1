@@ -96,7 +96,7 @@ function respond() {
 
 function postMessage2() {
   var botResponse, attach, options, body, botReq;
-    botResponse = "/lies /dormer /youknownothing /John /reddit /wow /help";
+    botResponse = "/lies /dormer /youknownothing /John /reddit /wow /quotes /help";
    
   options = {
     hostname: 'api.groupme.com',
