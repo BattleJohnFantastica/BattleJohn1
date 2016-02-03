@@ -179,7 +179,7 @@ function postMessage3() {
         "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
         "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
         ];
-    var natalie = teamn[Math.floor(Math.random()*keywords.length)];
+    var natalie = teamn[Math.floor(Math.random()*teamn.length)];
     
     
     botResponse = "The Dorm";
