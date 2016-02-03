@@ -13,7 +13,7 @@ function respond() {
       botRegex6 = /^\/reddit$/;
       botRegex7 = /^\/wow$/;
       botRegex8 = /^\/quotes$/;
-	  botRegex9a = /^\/quote$/;
+	  botRegex8a = /^\/quote$/;
       botRegex9 = /^\/cool$/;
 
   if(request.text && botRegex1.test(request.text)) {
@@ -105,9 +105,9 @@ function respond() {
     this.res.end();
   }
 	
-	 if(request.text && botRegex9a.test(request.text)) {
+	 if(request.text && botRegex8a.test(request.text)) {
     this.res.writeHead(200);
-    postMessage9();
+    postMessage8();
     this.res.end();
       } else {
     console.log("don't care");
