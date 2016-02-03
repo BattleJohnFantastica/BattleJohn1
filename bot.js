@@ -12,7 +12,8 @@ function respond() {
       botRegex5 = /^\/John$/;
       botRegex6 = /^\/reddit$/;
       botRegex7 = /^\/wow$/;
-      botRegex8 = [/^\/quotes$/, /^\/quote$/];
+      botRegex8 = /^\/quotes$/;
+	  botRegex9a = /^\/quote$/;
       botRegex9 = /^\/cool$/;
 
   if(request.text && botRegex1.test(request.text)) {
@@ -95,6 +96,16 @@ function respond() {
   }
     
      if(request.text && botRegex9.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage9();
+    this.res.end();
+      } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+	
+	 if(request.text && botRegex9a.test(request.text)) {
     this.res.writeHead(200);
     postMessage9();
     this.res.end();
