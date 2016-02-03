@@ -12,7 +12,7 @@ function respond() {
       botRegex5 = /^\/John$/;
       botRegex6 = /^\/reddit$/;
       botRegex7 = /^\/wow$/;
-      botRegex8 = /^\/quotes$/;
+      botRegex8 = [/^\/quotes$/, /^\/quote$/];
       botRegex9 = /^\/cool$/;
 
   if(request.text && botRegex1.test(request.text)) {
