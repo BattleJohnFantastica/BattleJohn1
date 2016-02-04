@@ -3,15 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-keywords = [
- "Fuckin Butter Bar", 
- "What game is that?", 
- "Don't have sex in that helmet!", 
- "Does the suit help too? Why haven't you mentioned it?", 
- "That'll stop him getting laid", 
- "Make him a sandwich", 
- "It's so he can't hear you nag! HAHAHAHHAHAHAHHAHAH"
-];
+
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
