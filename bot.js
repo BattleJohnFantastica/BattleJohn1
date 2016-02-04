@@ -3,7 +3,6 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex1 = /^\/lies$/;
@@ -330,7 +329,15 @@ function postMessage6() {
   
   var botResponse, keywords, options, body, botReq;
     
-    
+    keywords = [
+ "Fuckin Butter Bar", 
+ "What game is that?", 
+ "Don't have sex in that helmet!", 
+ "Does the suit help too? Why haven't you mentioned it?", 
+ "That'll stop him getting laid", 
+ "Make him a sandwich", 
+ "It's so he can't hear you nag! HAHAHAHHAHAHAHHAHAH"
+];
 var keyword = keywords[Math.floor(Math.random()*keywords.length)];
     
   options = {
@@ -411,7 +418,7 @@ function postMessage8() {
   
   var botResponse, keywords, options, body, botReq;
     
-    keywordsQuote = [
+    keywords = [
  ">Le bruit de la fin du monde dans tes oreilles", 
  ">All that is gold does not glitter", 
  ">To know both sides of a quarrel, is to judge without hate or alarm", 
@@ -425,8 +432,7 @@ function postMessage8() {
  ">I only got 10 likes in the last 5 minutes, do you think I should take it down? Let me take another selfie",
  ">being me has its advantages"
 ];
-	
-var keywordQuote = keywordsQuote[Math.floor(Math.random()*keywordsQuote.length)];
+var keyword = keywords[Math.floor(Math.random()*keywords.length)];
     
   options = {
     hostname: 'api.groupme.com',
