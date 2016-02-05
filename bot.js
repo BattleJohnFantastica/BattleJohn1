@@ -479,7 +479,7 @@ var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 
 function postMessage10() {
   var botResponse, attach, options, body, botReq;
-    botResponse = ("John is  Left Libertarian" + "\n" + cool() + "\n" + "Steven is Right Libertarian" + "\n" + cool() + "\n" + "Xitech is Left and Left Only" + "\n" + cool()  +"\n" + "Ben is Left Libertarian" + "\n" + cool() + "\n"  + "\n" + "\n" + cool());
+    botResponse = ("John is  Left Libertarian" + "\n" + cool() + "\n" + "Steven is Right Libertarian" + "\n" + cool() + "\n" + "Xitech is Left and Left Only" + "\n" + cool()  + "\n" + "Ben is Left Libertarian" + "\n" + cool() +  "\n" + "Jo is Left Libertarian" + "\n" + "\n"  + "\n" + "\n" + cool());
    
   options = {
     hostname: 'api.groupme.com',
