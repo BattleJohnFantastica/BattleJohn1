@@ -21,107 +21,68 @@ function respond() {
     this.res.writeHead(200);
     postMessage1();
     this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-        }
+  } else 
 
       if(request.text && botRegex2.test(request.text)) {
     this.res.writeHead(200);
     postMessage2();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } 
     
     if(request.text && botRegex3.test(request.text)) {
     this.res.writeHead(200);
     postMessage3();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } else 
+		  
      if(request.text && botRegex4.test(request.text)) {
     this.res.writeHead(200);
     postMessage4();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } else 
   
   if(request.text && botRegex5.test(request.text)) {
     this.res.writeHead(200);
     postMessage5();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } else 
   
   if(request.text && botRegex6.test(request.text)) {
     this.res.writeHead(200);
     postMessage6();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } else 
   
     if(request.text && botRegex7.test(request.text)) {
     this.res.writeHead(200);
     postMessage7();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } 
     
     if(request.text && botRegex8.test(request.text)) {
     this.res.writeHead(200);
     postMessage8();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } 
     
      if(request.text && botRegex9.test(request.text)) {
     this.res.writeHead(200);
     postMessage9();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } 
 	
 	 if(request.text && botRegex8a.test(request.text)) {
     this.res.writeHead(200);
     postMessage8();
     this.res.end();
-      } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+      } 
 	
 	if(request.text && botRegex10.test(request.text)) {
     this.res.writeHead(200);
     postMessage10();
     this.res.end();
       } else {
-    console.log("don't care");
+    console.log("nothing to respond to");
     this.res.writeHead(200);
     this.res.end();
   }
@@ -479,7 +440,7 @@ var keyword = keywords[Math.floor(Math.random()*keywords.length)];
 
 function postMessage10() {
   var botResponse, attach, options, body, botReq;
-    botResponse = ("John is  Left Libertarian" + "\n" + cool() + "\n" + "Steven is Right Libertarian" + "\n" + cool() + "\n" + "Xitech is Left and Left Only" + "\n" + cool()  + "\n" + "Ben is Left Libertarian" + "\n" + cool() +  "\n" + "Jo is Left Libertarian" + "\n" + "\n"  + "\n" + "\n" + cool());
+    botResponse = ("John is  Left Libertarian" + "\n" + cool() + "\n" + "Steven is Right Libertarian" + "\n" + cool() + "\n" + "Xitech is Left and Left Only" + "\n" + cool()  + "\n" + "Ben is Left Libertarian" + "\n" + cool() +  "\n" + "Jo is Left Libertarian" + cool() + "\n" + "\n"  + "\n" + "\n" + cool());
    
   options = {
     hostname: 'api.groupme.com',
