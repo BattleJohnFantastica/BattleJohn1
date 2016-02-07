@@ -269,7 +269,7 @@ function postMessage5() {
 	   ">who's Andrew"
 	   ">I'm amazing in every dimension",
 	   ">I'm bisexual",
-	   "><3 whisky",
+	   "><3 whisky"
 	   ];
 	
 	johnQuote = johnQuotes[Math.floor(Math.random()*johnQuotes.length)];
