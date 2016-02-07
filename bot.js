@@ -262,7 +262,17 @@ function postMessage4() {
 
 function postMessage5() {
   var botResponse, attach, options, body, botReq;
-    botResponse = ">Who are you people";
+   johnQuotes = [ 
+	   ">who are you people?",
+	   ">what's going on",
+	   ">did I miss the drama"
+	   ">who's Andrew"
+	   ">I'm amazing in every dimension",
+	   ">I'm bisexual",
+	   "><3 whisky",
+	   ];
+	
+	johnQuote = johnQuotes[Math.floor(Math.random()*johnQuotes.length)];
    
 
   options = {
@@ -273,11 +283,11 @@ function postMessage5() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse,
+    "text" : johnQuote,
     
        };
 
-  console.log('sending ' + botResponse + ' to ' + botID);
+  console.log('sending ' + johnQuote + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
