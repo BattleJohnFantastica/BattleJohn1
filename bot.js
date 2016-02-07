@@ -262,14 +262,15 @@ function postMessage4() {
 
 function postMessage5() {
   var botResponse, attach, options, body, botReq;
+	
    johnQuotes = [ 
 	   ">who are you people?",
 	   ">what's going on",
 	   ">did I miss the drama"
-	   ">who's Andrew"
+	   ">who is Andrew"
 	   ">I'm amazing in every dimension",
 	   ">I'm bisexual",
-	   "><3 whisky"
+	   "> whisky"
 	   ];
 	
 	johnQuote = johnQuotes[Math.floor(Math.random()*johnQuotes.length)];
