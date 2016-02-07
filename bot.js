@@ -266,8 +266,8 @@ function postMessage5() {
    johnQuotes = [ 
 	   ">who are you people?",
 	   ">what's going on",
-	   ">did I miss the drama"
-	   ">who is Andrew"
+	   ">did I miss the drama",
+	   ">who is Andrew",
 	   ">I'm amazing in every dimension",
 	   ">I'm bisexual",
 	   "> whisky"
