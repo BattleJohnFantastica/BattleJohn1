@@ -3,13 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
- teamn = [
-        "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
-        "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
-        "https://i.groupme.com/500x281.gif.39b595ed03ce4669b2a2f94b4f66d968",
-		"https://i.groupme.com/634x952.jpeg.5707b6e742f04bd39e89296f2ec2fd2f",
-		"https://i.groupme.com/900x1349.jpeg.5fbb409e46764836b3b0daee4a91ba7a.large"
-        ];
+
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -186,7 +180,14 @@ function postMessage2() {
 function postMessage3() {
   var botResponse, teamn, attach, options, body, botReq;
     
-   
+    teamn = [
+        "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
+        "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
+        "https://i.groupme.com/500x281.gif.39b595ed03ce4669b2a2f94b4f66d968",
+		"https://i.groupme.com/634x952.jpeg.5707b6e742f04bd39e89296f2ec2fd2f",
+		"https://i.groupme.com/900x1349.jpeg.5fbb409e46764836b3b0daee4a91ba7a.large"
+        ];
+	
     var natalie = teamn[Math.floor(Math.random()*teamn.length)];
     
     
@@ -533,6 +534,14 @@ function postMessage9() {
 
 function postMessage10a() {
   var botResponse, attach, options, body, botReq;
+	
+	 teamn = [
+        "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
+        "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
+        "https://i.groupme.com/500x281.gif.39b595ed03ce4669b2a2f94b4f66d968",
+		"https://i.groupme.com/634x952.jpeg.5707b6e742f04bd39e89296f2ec2fd2f",
+		"https://i.groupme.com/900x1349.jpeg.5fbb409e46764836b3b0daee4a91ba7a.large"
+        ];
    
 	 last_element = teamn[teamn.length - 1];
    
