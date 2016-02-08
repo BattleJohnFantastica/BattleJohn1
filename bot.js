@@ -18,7 +18,7 @@ function respond() {
 	  botRegex8a = /^\/quote$/;
       botRegex9 = /^\/cool$/;
 	  botRegex10 = /^\/pList$/;
-	  botRegex10a = /^\/dormerLast&/;
+	  botRegex10a = /^\/dormerLast$/;
 	
 	console.log("incoming" + " " + request.text)
 
