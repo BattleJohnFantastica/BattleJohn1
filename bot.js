@@ -204,7 +204,7 @@ function postMessage3() {
     var natalie = teamn[Math.floor(Math.random()*teamn.length)];
     
     
-    botResponse = "The Dorm";
+    botResponse = "The Dorm or Emmz";
     attach = [
     {
       "type"  : "image",
@@ -551,7 +551,7 @@ function postMessage10a() {
    
 	 last_element = teamn[teamn.length - 1];
    
- botResponse = "The Dorm";
+ botResponse = "The Dorm or Emmz";
     attach = [
     {
       "type"  : "image",
