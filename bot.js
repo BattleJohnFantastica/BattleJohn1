@@ -199,7 +199,22 @@ function postMessage2() {
 function postMessage3() {
   var botResponse, teamn, attach, options, body, botReq;
     
- 
+  teamn = [
+        "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
+        "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
+        "https://i.groupme.com/500x281.gif.39b595ed03ce4669b2a2f94b4f66d968",
+		"https://i.groupme.com/634x952.jpeg.5707b6e742f04bd39e89296f2ec2fd2f",
+		"https://i.groupme.com/900x1349.jpeg.5fbb409e46764836b3b0daee4a91ba7a.large",
+		"https://i.groupme.com/737x1106.jpeg.fbcc8c73550b44cbab45cc64e57d8270.large",
+		"https://i.groupme.com/2246x3370.jpeg.f84ae93f8eb748808a38929cb1dddb64.large",
+		"https://i.groupme.com/1280x1852.jpeg.573c4b5997bc4fd081e78c17f8afa64b.large",
+		"https://i.groupme.com/2500x1548.jpeg.2720cd07207a41509364143fafde2eaf.large",
+		"https://i.groupme.com/530x354.jpeg.0511d67491374bc3920c47a2bb05ba1a.large",
+		"https://i.groupme.com/1024x1394.jpeg.3239e95c2d4147578ebca4bf9c4f3ce5.large",
+		"https://i.groupme.com/500x600.png.59cbe0156cd04226b72efa70042e6fd6.large",
+		"https://i.groupme.com/600x800.jpeg.3d4e338f095f4bdcb9f30d94c691824a.large"
+		 ];
+
 	
      natalie = teamn[Math.floor(Math.random()*teamn.length)];
     
