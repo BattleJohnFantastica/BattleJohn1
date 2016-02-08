@@ -19,6 +19,8 @@ function respond() {
       botRegex9 = /^\/cool$/;
 	  botRegex10 = /^\/pList$/;
 	  botRegex10a = /^\/dormerLast&/;
+	
+	console.log("incoming" + " " + request.text)
 
   if(request.text && botRegex1.test(request.text)) {
     this.res.writeHead(200);
