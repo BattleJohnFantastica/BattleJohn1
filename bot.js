@@ -201,7 +201,7 @@ function postMessage3() {
     
  
 	
-    var natalie = teamn[Math.floor(Math.random()*teamn.length)];
+     natalie = teamn[Math.floor(Math.random()*teamn.length)];
     
     
     botResponse = "The Dorm or Emmz";
