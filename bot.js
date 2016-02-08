@@ -545,6 +545,16 @@ function postMessage10a() {
    
 	 last_element = teamn[teamn.length - 1];
    
+ botResponse = "The Dorm";
+    attach = [
+    {
+      "type"  : "image",
+      "url"   : last_element
+    }
+  ]
+
+
+
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -553,11 +563,12 @@ function postMessage10a() {
 
   body = {
     "bot_id" : botID,
-    "text" : last_element,
-    
+    "text" : botResponse,
+    "attachments" : attach
        };
 
-  console.log('sending ' + last_element + ' to ' + botID);
+  console.log('sending ' + botResponse + ' to ' + botID);
+
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
