@@ -414,7 +414,8 @@ function postMessage8() {
  ">You know Jeeves, I feel I could do better justice to this philosophy if I understood what all these words meant",
  ">It is a monster Begot upon itself, born on itself",
  ">I only got 10 likes in the last 5 minutes, do you think I should take it down? Let me take another selfie",
- ">being me has its advantages"
+ ">being me has its advantages",
+ ">necrophilia is kinda annoying"
 ];
 var keyword = keywords[Math.floor(Math.random()*keywords.length)];
     
