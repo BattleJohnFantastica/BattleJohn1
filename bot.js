@@ -553,11 +553,11 @@ function postMessage10a() {
 
   body = {
     "bot_id" : botID,
-    "text" : teamn,
+    "text" : last_element,
     
        };
 
-  console.log('sending ' + teamn + ' to ' + botID);
+  console.log('sending ' + last_element + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
