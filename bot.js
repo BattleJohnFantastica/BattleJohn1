@@ -3,6 +3,14 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
+ teamn = [
+        "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
+        "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
+        "https://i.groupme.com/500x281.gif.39b595ed03ce4669b2a2f94b4f66d968",
+		"https://i.groupme.com/634x952.jpeg.5707b6e742f04bd39e89296f2ec2fd2f",
+		"https://i.groupme.com/900x1349.jpeg.5fbb409e46764836b3b0daee4a91ba7a.large"
+        ];
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex1 = /^\/lies$/;
@@ -16,6 +24,7 @@ function respond() {
 	  botRegex8a = /^\/quote$/;
       botRegex9 = /^\/cool$/;
 	  botRegex10 = /^\/pList$/;
+	  botRegex10a = /^\dormerLast&/;
 
   if(request.text && botRegex1.test(request.text)) {
     this.res.writeHead(200);
@@ -81,7 +90,15 @@ function respond() {
     this.res.writeHead(200);
     postMessage10();
     this.res.end();
-      } else {
+      }
+	
+	if(request.text && botRegex10a.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage10a();
+    this.res.end();
+      }
+	
+	else {
     console.log("nothing to respond to");
     this.res.writeHead(200);
     this.res.end();
@@ -169,12 +186,7 @@ function postMessage2() {
 function postMessage3() {
   var botResponse, teamn, attach, options, body, botReq;
     
-    teamn = [
-        "https://i.groupme.com/620x320.jpeg.82b574859e934db5af4d1790c52766a1",
-        "https://i.groupme.com/934x701.jpeg.00489cbd07f74728921dddca7aea5d09",
-        "https://i.groupme.com/500x281.gif.39b595ed03ce4669b2a2f94b4f66d968",
-		"https://i.groupme.com/634x952.jpeg.5707b6e742f04bd39e89296f2ec2fd2f",
-        ];
+   
     var natalie = teamn[Math.floor(Math.random()*teamn.length)];
     
     
@@ -501,6 +513,42 @@ function postMessage9() {
        };
 
   console.log('sending ' + botResponse + ' to ' + botID);
+
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
+}
+
+function postMessage10a() {
+  var botResponse, attach, options, body, botReq;
+   
+	 last_element = teamn[teamn.length - 1];
+   
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+    "bot_id" : botID,
+    "text" : teamn,
+    
+       };
+
+  console.log('sending ' + teamn + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
